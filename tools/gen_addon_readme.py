@@ -354,11 +354,10 @@ def gen_one_addon_readme(
     badges = []
     development_status = manifest.get("development_status", "Beta").lower()
     if development_status in DEVELOPMENT_STATUS_BADGES:
-        badges.append(DEVELOPMENT_STATUS_BADGES[development_status])
+        pass
     license = manifest.get("license")
     if license in LICENSE_BADGES:
         badges.append(LICENSE_BADGES[license])
-    badges.append(make_repo_badge(org_name, repo_name, branch, addon_name))
     if org_name == "OCA":
         badges.append(make_weblate_badge(repo_name, branch, addon_name))
     if org_name == "OCA":
